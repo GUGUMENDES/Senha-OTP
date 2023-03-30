@@ -1,0 +1,67 @@
+:root {
+    font-size: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(20, 20, 20, 1);
+}
+
+div.gerador-senha {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    border-radius: 5px;
+}
+
+div.gerador-senha p {
+    margin: 1.2rem auto;
+    font-size: 3.2rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+div.gerador-senha p::after {
+    content: "Copiada";
+    position: absolute;
+    font-size: 1.2rem;
+    background-color: mediumseagreen;
+    padding: 0.5rem;
+    border-radius: 5px;
+    top: calc(-3.2rem / 2);
+    right: calc(-3.2rem * 2);
+    opacity: 0;
+    transition: 1s;
+}
+
+div.gerador-senha p.copiada::after {
+    opacity: 1;
+    transition: 1s;
+}
+
+div.gerador-senha button {
+    margin: 1.2rem auto;
+    font-size: 2.4rem;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgba(255, 224, 0, 1);
+    color: rgba(20, 20, 20, 1);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+div.gerador-senha button:disabled {
+    cursor: default;
+}
